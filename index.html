@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="header">
+            <h1>Cake N Bake</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        
+        <div class="main">
+            <img id="img1" onmouseover="document.getElementById('img1').src='images/5.jpg'" onmouseout="document.getElementById('img1').src='images/2.jpg'" src="images/5.jpg"> 
+                
+                <div class="info">
+                    <h1 id="heading">Welcome to Cake n Bake</h1>
+                    <h4>Cake n Bake offers the best cakes and sweets for you.</h4>
+                    <div id="SectionName" style="display:none">Boasting over five decades of industry experience, we're staffed by a passionate team of chefs and friendly front of store staff who go the extra mile to ensure your experience is positive and delicious! All our mouth-watering desserts and hearty pies are lovingly made using original recipes made from scratch with the finest ingredients.</div>
+                    <button id="button1" ONCLICK="ShowAndHide()"><a href="#">Learn More</button></a>
+                </div>
+        </div>
+
+        <div class="footer">
+            <div class="title">
+                <h1>Cake N Bake</h1>
+                <p>Copyright ©1997 <br>All rights reserved</p>
+            </div>
+            <div class="menu">
+                <a href="#">Menu</a><br>
+                <a href="#">Products</a><br>
+                <a href="#">About</a><br>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social">
+                <div class="icon">
+                    <a href="#facebook"><img src="images/facebook.png" width="40%"></a><br>
+                    <a href="#twitter"><img src="images/twitter.png" width="70%"></a><br>
+                    <a href="#pinterest"><img src="images/pinterest.png" width="70%"></a>
+                </div>
+                <div class="icon-text">
+                    <a href="#facebook">Facebook</a><br>
+                    <a href="#twitter">Twitter</a><br>
+                    <a href="#pinterest">Pinterest</a>
+                </div>
+            </div>
+            <div class="map">
+                <img src="images/map.png" width="100%" height="100%">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        //alert box displaying thank you message
+        window.alert("Thank you for vising our website.")
+
+       //Show alert box with your name when you open this website
+       let person = prompt("Please enter your name:", "Your Name");
+       window.alert("Helloo " + person + " !! We are here to make your occasions more sweeter with our delicious sweets.");
+
+        //show and hide text when you click on the button  
+        function ShowAndHide() {
+            var x = document.getElementById('SectionName');
+            if (x.style.display == 'none') {
+                x.style.display = 'block';
+                document.getElementById('button1').innerHTML="less";
+                document.getElementById('button1').style.marginTop="20px";
+                document.getElementById('button1').style.fontSize="20px";
+                document.getElementById('button1').style.fontFamily="text";
+            } else {
+                x.style.display = 'none';
+                document.getElementById('button1').innerHTML="Learn More";
+                document.getElementById('button1').style.marginTop="-30px";
+                document.getElementById('button1').style.fontSize="20px";
+                document.getElementById('button1').style.fontFamily="text";
+            }
+        }
+
+        //change background image on mouse hover
+        img1.src="images/2.jpg";
+
+        //change color of heading
+        document.getElementById('heading').style.fontFamily="title";
+        
+    </script>
+    
+</body>
+</html>
